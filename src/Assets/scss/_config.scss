@@ -1,0 +1,82 @@
+$black: #000000;
+$white: #ffffff;
+$green: #01f200;
+$red: #ff1755;
+$orange: #ffcd28;
+$greyishBlue: #697689;
+$darkBlue: #2178;
+$imgpath: "https://github.com/hostinger/task-frontend/blob/master/assets/background.jpg?raw=true";
+
+@mixin translateY($e){
+	-webkit-transform: translateY($e);
+	   -moz-transform: translateY($e);
+	    -ms-transform: translateY($e);
+	     -o-transform: translateY($e); 
+	        transform: translateY($e);
+}
+
+@mixin transition($e){
+	-webkit-transition: $e;
+	   -moz-transition: $e;
+	    -ms-transition: $e;
+	     -o-transition: $e;
+	        transition: $e; 
+}
+
+#bg{
+	background: {
+        image: url("https://github.com/hostinger/task-frontend/blob/master/assets/background.jpg?raw=true");
+        position: top;
+        size: cover;
+        repeat: no-repeat;
+        attachment:fixed;
+   }
+   height: 100vh;
+   -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+       -ms-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+           transform: scaleX(-1);
+}
+body{
+	font-family: 'Open Sans', sans-serif; 
+	font-style: normal;
+	line-height: 42px;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover{  
+		color:$orange;  
+		@include transition(.4s ease-in-out);
+	}
+}
+
+.arrowLeft{
+	position:absolute;
+	margin-top:20px;
+	width:0;
+	height:0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left:  10px solid $red; 
+}
+
+.arrowRight{
+	position:absolute;
+	margin-top:20px;
+	margin-left:30px;
+	width:0;
+	height:0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right:  10px solid $red; 
+}
+.fas{
+	color: $green;
+}
+
+
+
